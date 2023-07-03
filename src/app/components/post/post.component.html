@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Solicitud</title>
+    <link rel="stylesheet" href="post.component.css">
+</head>
+
+<body>
+    
+        <section class="form-register">
+            <h4>Formulario solicitud</h4>
+            <label class="dias-solicitados"> ingrese los dias solicitados</label>
+            <input class="controls" type="text" name="Dias solicitados" id="solicitud" placeholder="Ingrese dias">
+            <label class="documento">Ingrese su periodo de vacaciones</label>
+            <input class="controls" type="date" name="periodo de vacaciones" id="periodo" placeholder="Ingrese periodo de sus vacaciones">
+            <label class="documento">Ingrese fecha de Reingreso</label>
+            <input class="controls" type="date" name=" fecha Reingreso"id="Reingreso" placeholder="fecha de Reingreso">
+            <button mat-raised-button color="primary" class="styled-button" (click)="savePost()" >enviar solicitud</button>
+            
+            
+        </section>
+
+        <div *ngIf="saveOk"   id="listTable">
+            <app-post-details [saveOk]="saveOk" (postSeleccionado)="setPersonToEdit($event)">
+            </app-post-details>
+        </div>
+</body>
+
+

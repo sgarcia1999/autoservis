@@ -1,0 +1,20 @@
+<table *ngIf="saveOk">
+	<thead>
+		<tr>
+			<th>USER ID</th>
+			<th>TITULO</th>
+			<th>DESCRIPCIÓN</th>
+			<th>ACCIONES</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let item of post">
+			<td>{{item.userId}}</td>
+			<td>{{item.title}}</td>
+			<td></td>
+			<td>
+				<button type="button" (click)="editPerson(item)">Edit</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
